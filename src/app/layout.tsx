@@ -1,3 +1,4 @@
+import './globals.css';
 import { Noto_Serif_JP } from 'next/font/google'
 
 const NotoSerifJP = Noto_Serif_JP({
