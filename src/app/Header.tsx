@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Suspense } from 'react'
 import 'server-only'
-import { prisma } from '../../globals/db'
+import { prisma } from '@/globals/db'
 import { zVersion } from './type'
 
 const Version = async () => {
