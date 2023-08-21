@@ -1,13 +1,14 @@
 import './globals.css';
-import { Noto_Serif_JP } from 'next/font/google'
+// Failed to fetch `Noto Serif JP` from Google Fonts. になるのでとりあえずコメントアウト
+// import { Noto_Serif_JP } from 'next/font/google'
 
 import Header from './Header';
 
-const NotoSerifJP = Noto_Serif_JP({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  preload: true,
-});
+// const NotoSerifJP = Noto_Serif_JP({
+//   weight: ["400", "700"],
+//   subsets: ["latin"],
+//   preload: true,
+// });
 
 export const metadata = {
   title: 'Next.js Awesome Memo App',
@@ -21,7 +22,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className={NotoSerifJP.className}>
+      {/* <body className={NotoSerifJP.className}> */}
+      <body>
         <Header></Header>
         {children}
       </body>
