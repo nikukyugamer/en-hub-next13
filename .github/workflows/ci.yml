@@ -1,0 +1,35 @@
+name: エンジニアHub Next 13
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - '**'
+    tags-ignore:
+      - 'v*.*.*'
+
+env:
+  TZ: Asia/Tokyo
+
+jobs:
+  jest:
+    name: en_hub_next
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      - name: コードをチェックアウトする
+        uses: actions/checkout@v4
+      # 未使用だが、将来的に移行するときのために残しておく（不要なら削除）
+      - name: pnpm のセットアップを行う
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9.0.5
+      - name: Node.js のセットアップを行う
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .node-version
+          cache: yarn
+          cache-dependency-path: yarn.lock
+      - name: Node のパッケージをインストールする
+        run: |
+          yarn install --frozen-lockfile
