@@ -40,4 +40,4 @@ jobs:
           cache: yarn
       - name: $ yarn install する
         run: |
-          yarn install --frozen-lockfile
+          yarn install --immutable
