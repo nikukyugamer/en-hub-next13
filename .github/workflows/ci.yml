@@ -8,27 +8,36 @@ on:
     tags-ignore:
       - 'v*.*.*'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
 env:
   TZ: Asia/Tokyo
 
+permissions:
+  contents: read
+
 jobs:
-  jest:
+  en_hub_next_ci:
     name: en_hub_next
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
-      - name: コードをチェックアウトする
-        uses: actions/checkout@v4
-      # 未使用だが、将来的に移行するときのために残しておく（不要なら削除）
-      - name: pnpm のセットアップを行う
-        uses: pnpm/action-setup@v2
-        with:
-          version: 9.0.5
+      - name: （デバッグ用）Payload ($GITHUB_EVENT_PATH) を確認する
+        run: |
+          cat $GITHUB_EVENT_PATH
+      - name: $ git clone する
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
       - name: Node.js のセットアップを行う
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b # v4.0.3
         with:
           node-version-file: .node-version
           cache: yarn
-      - name: Node のパッケージをインストールする
+      - name: $ yarn install する
         run: |
           yarn install --frozen-lockfile
