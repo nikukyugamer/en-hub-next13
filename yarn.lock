@@ -1633,7 +1633,7 @@ __metadata:
     react-dom: "npm:19.0.0"
     server-only: "npm:^0.0.1"
     swr: "npm:^2.2.1"
-    tailwindcss: "npm:4.0.4"
+    tailwindcss: "npm:4.0.8"
     ts-node: "npm:^10.9.1"
     typescript: "npm:5.7.3"
     zod: "npm:^3.22.2"
@@ -4991,10 +4991,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:4.0.4":
-  version: 4.0.4
-  resolution: "tailwindcss@npm:4.0.4"
-  checksum: 10c0/2f430f81a981c9dfd7072ce7cd6f9935a5e36187a4f12e998caa2b5d159f1acf4ebd1d608b06272bf94a041c24b17cd5f625d049972dccdf6a75027eb03f916e
+"tailwindcss@npm:4.0.8":
+  version: 4.0.8
+  resolution: "tailwindcss@npm:4.0.8"
+  checksum: 10c0/4e7656792405fe085f788510139e37a4cd2d904c620ad90222f541f3227a64885e3423413f4748870d3480253b0f50c3ddafd70bc3acd9ec33f494c12e6278aa
   languageName: node
   linkType: hard
 
