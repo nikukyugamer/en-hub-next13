@@ -17,6 +17,7 @@
     "typescript": "5.8.2"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "4.1.1",
     "prisma": "^6.0.0",
     "prisma-repl": "^1.4.0",
     "server-only": "^0.0.1",
