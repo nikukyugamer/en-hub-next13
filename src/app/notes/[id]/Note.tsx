@@ -2,10 +2,10 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback } from "react";
-import { Note } from "../type";
+import { Note as NoteType } from "../type";
 
 type Props = {
-  item: Note;
+  item: NoteType;
 }
 
 const Note: React.FC<Props> = ({ item }) => {
