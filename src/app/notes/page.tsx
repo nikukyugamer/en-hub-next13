@@ -15,6 +15,14 @@ export const metadata = {
   title: "List Notes",
 }
 
+// getNotes関数をページコンポーネント内で定義
+const getNotes = async () => {
+  const res = await fetch(`${apiUrl}/notes`, { cache: 'no-store' });
+  const data = await res.json();
+  const notes = zNotes.parse(data);
+  return notes;
+};
+
 export default async function Page() {
   // 2. APIを用いたデータ取得
   const notes = await getNotes();
@@ -34,10 +42,3 @@ export default async function Page() {
     </main>
   )
 }
-
-export const getNotes = async () => {
-  const res = await fetch(`${apiUrl}/notes`, { cache: 'no-store' });
-  const data = await res.json();
-  const notes = zNotes.parse(data);
-  return notes;
-};
