@@ -41,3 +41,6 @@ jobs:
       - name: $ yarn install する
         run: |
           yarn install --immutable
+      - name: $ yarn build する
+        run: |
+          yarn build
