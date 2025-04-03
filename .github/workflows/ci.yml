@@ -18,6 +18,7 @@ defaults:
 
 env:
   TZ: Asia/Tokyo
+  DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
 permissions:
   contents: read
