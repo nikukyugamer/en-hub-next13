@@ -30,7 +30,7 @@
   },
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "rm -rf .next && next build",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start"
