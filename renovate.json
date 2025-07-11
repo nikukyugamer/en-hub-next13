@@ -8,12 +8,12 @@
   "labels": ["dependencies", "renovate"],
   "dependencyDashboard": true,
   "pin": {
-    "automerge": false
+    "automerge": true
   },
   "packageRules": [
     {
       "matchPackagePatterns": ["^.*"],
-      "automerge": false
+      "automerge": true
     }
   ]
 }
