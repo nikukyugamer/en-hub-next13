@@ -18,7 +18,7 @@
     "typescript": "5.8.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.1.1",
+    "@biomejs/biome": "2.1.2",
     "prisma": "^6.0.0",
     "prisma-repl": "^1.4.0",
     "server-only": "^0.0.1",
